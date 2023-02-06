@@ -8,7 +8,7 @@ module adder_N_tb;
 	logic Cin;
 	
 	//Most significant bit of SUM = Cout
-	adder_N #(.N(N)) u1(SUM, Cout, P, Q, Cin);
+	ripple_adder #(.N(N)) u1(SUM, Cout, P, Q, Cin);
 
 	initial 
 	begin

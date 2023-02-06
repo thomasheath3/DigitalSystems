@@ -159,7 +159,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 32 624 200 640)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A[7..0]" (rect 5 0 39 12)(font "Arial" ))
+	(text "A[7..0]" (rect 5 0 38 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -484,7 +484,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 392 280 576 360)
+	(rect 400 288 584 368)
 	(text "mult" (rect 5 0 26 12)(font "Arial" ))
 	(text "U2_Dedicated" (rect 8 64 74 81)(font "Intel Clear" ))
 	(port
@@ -546,6 +546,35 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 160 64))
 	)
 	(annotation_block (parameter)(rect 416 472 585 510))
+)
+(symbol
+	(rect 608 224 792 304)
+	(text "mult" (rect 5 0 26 12)(font "Arial" ))
+	(text "U4_Dedicated" (rect 8 64 74 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "dataa[7..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "dataa[7..0]" (rect 21 27 74 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "datab[7..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "datab[7..0]" (rect 21 43 74 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "result[15..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "result[15..0]" (rect 114 27 173 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 64))
+	)
 )
 (connector
 	(pt 176 88)
@@ -662,38 +691,8 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 336 312)
-	(pt 392 312)
-	(bus)
-)
-(connector
-	(pt 368 328)
-	(pt 392 328)
-	(bus)
-)
-(connector
-	(pt 336 216)
-	(pt 336 312)
-	(bus)
-)
-(connector
-	(pt 368 232)
-	(pt 368 328)
-	(bus)
-)
-(connector
-	(pt 336 312)
-	(pt 336 408)
-	(bus)
-)
-(connector
 	(pt 336 408)
 	(pt 336 632)
-	(bus)
-)
-(connector
-	(pt 368 328)
-	(pt 368 424)
 	(bus)
 )
 (connector
@@ -739,18 +738,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "prod1[15..0]" (rect 586 200 642 217)(font "Intel Clear" ))
-	(pt 576 216)
-	(pt 640 216)
-	(bus)
-)
-(connector
-	(text "prod2[15..0]" (rect 586 296 642 313)(font "Intel Clear" ))
-	(pt 576 312)
-	(pt 640 312)
-	(bus)
-)
-(connector
 	(text "prod3[15..0]" (rect 594 392 650 409)(font "Intel Clear" ))
 	(pt 584 408)
 	(pt 648 408)
@@ -771,11 +758,69 @@ https://fpgasoftware.intel.com/eula.
 	(pt 592 112)
 	(pt 488 112)
 )
-(junction (pt 336 312))
-(junction (pt 368 328))
+(connector
+	(pt 336 320)
+	(pt 400 320)
+	(bus)
+)
+(connector
+	(pt 368 336)
+	(pt 400 336)
+	(bus)
+)
+(connector
+	(pt 336 216)
+	(pt 336 320)
+	(bus)
+)
+(connector
+	(pt 336 320)
+	(pt 336 408)
+	(bus)
+)
+(connector
+	(pt 368 232)
+	(pt 368 336)
+	(bus)
+)
+(connector
+	(pt 368 336)
+	(pt 368 424)
+	(bus)
+)
+(connector
+	(text "prod1[15..0]" (rect 586 200 642 217)(font "Intel Clear" ))
+	(pt 576 216)
+	(pt 608 216)
+	(bus)
+)
+(connector
+	(pt 608 216)
+	(pt 608 256)
+	(bus)
+)
+(connector
+	(text "prod2[15..0]" (rect 594 304 650 321)(font "Intel Clear" ))
+	(pt 584 320)
+	(pt 608 320)
+	(bus)
+)
+(connector
+	(pt 608 320)
+	(pt 608 272)
+	(bus)
+)
+(connector
+	(text "prod4" (rect 792 240 819 257)(font "Intel Clear" ))
+	(pt 792 256)
+	(pt 808 256)
+	(bus)
+)
 (junction (pt 336 408))
 (junction (pt 368 424))
 (junction (pt 896 552))
+(junction (pt 336 320))
+(junction (pt 368 336))
 (text "LEDs" (rect 1208 392 1237 411)(font "Intel Clear" (font_size 8)))
 (text "Push Switches (Push for LOW)" (rect 128 344 302 363)(font "Intel Clear" (font_size 8)))
 (text "DIP Switches" (rect 200 568 276 587)(font "Intel Clear" (font_size 8)))
