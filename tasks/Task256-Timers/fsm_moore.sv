@@ -8,21 +8,27 @@ always_comb begin : next_state_logic
 
    //Default is to stay in the current state
    next_state = state;
+	
+	if(RDY) begin
 
-   //Conditionally update state
-   case(state)
+		//Conditionally update state
+		case(state)
 
-   S0:   if (X == '1)
-            next_state = S1;
+		S0:   if (X == '1)
+					next_state = S1;
 
-   S1:   next_state = S2;
+		S1:   next_state = S2;
 
-   S2:   if (X == '0)
-            next_state = S0;
-   default:
-         next_state = S0;
+		S2:   if (X == '0)
+					next_state = S0;
+		default:
+				next_state = S0;
+				
+		endcase
+		
+	end
 
-   endcase
+   
 end
 
 always_ff @(posedge clk or negedge reset) begin

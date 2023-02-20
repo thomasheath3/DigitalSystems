@@ -432,7 +432,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 392 432 520 544)
 	(text "enum_fsm1" (rect 5 0 64 12)(font "Arial" ))
-	(text "inst4" (rect 8 96 30 113)(font "Intel Clear" ))
+	(text "inst4" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -458,7 +458,7 @@ https://fpgasoftware.intel.com/eula.
 		(pt 128 32)
 		(output)
 		(text "Q" (rect 0 0 8 12)(font "Arial" ))
-		(text "Q" (rect 101 27 109 39)(font "Arial" ))
+		(text "Q" (rect 101 27 107 39)(font "Arial" ))
 		(line (pt 128 32)(pt 112 32))
 	)
 	(drawing
